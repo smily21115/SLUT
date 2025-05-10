@@ -1,0 +1,40 @@
+body {
+    background: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  canvas {
+    background: #222;
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #fff;
+  }
+  .controls {
+    margin: 10px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  #menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 100;
+  }
+  #menu input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+    width: 100px;
+  }
