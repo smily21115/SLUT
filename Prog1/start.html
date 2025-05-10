@@ -2,18 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>2 Player Fighting Game</title>
-  <style>
-    canvas {
-      background: #222;
-      display: block;
-      margin: 20px auto;
-      border: 2px solid #fff;
-    }
-  </style>
+  <title>HAR HAR HAR YAR</title>
+  <link rel="stylesheet" href="styling.css">
 </head>
 <body>
   <canvas id="game" width="800" height="400"></canvas>
+  <div class="controls">
+    <button id="restartBtn" class="btn">Restart </button>
+    <button id="settingsBtn" class="btn">Settings</button>
+  </div>
+
+  <div id="menu">
+    <h2>Game settings</h2>
+    <div>
+      <h3>Player 1</h3>
+      <label>Left <input type="text" id="p1Left" value="a"></label><br>
+      <label>Right <input type="text" id="p1Right" value="d"></label><br>
+      <label>Attack<input type="text" id="p1Attack" value="s"></label><br>       
+      <label>Jump <input type="text" id="p1Jump" value="w"></label><br>
+    </div>
+    <div>
+      <h3>Player 2</h3>
+      <label>Left <input type="text" id="p2Left" value="ArrowLeft"></label><br>
+      <label>Right <input type="text" id="p2Right" value="ArrowRight"></label><br>
+      <label>Attack<input type="text" id="p2Attack" value="ArrowDown"></label><br>       
+      <label>Jump <input type="text" id="p2Jump" value="ArrowUp"></label><br>
+    </div>
+    <button id="saveSettingsBtn" class="btn">Spara</button>
+    <button id="closeSettingsBtn" class="btn">Stäng</button>
+  </div>
   <script src="game.js"></script>
 </body>
 </html>
