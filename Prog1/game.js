@@ -30,7 +30,7 @@ let player2 = {
   hp: 100,
   keyLeft: 'ArrowLeft',
   keyRight: 'ArrowRight',
-  keyAttack: 'Arrow',
+  keyAttack: 'ArrowDown',
   keyJump:'ArrowUp', 
   isJumping: false,
   vy: 0,
