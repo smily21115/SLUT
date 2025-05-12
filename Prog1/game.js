@@ -239,35 +239,7 @@ function restartGame() {
 }
 
 // Inställningmeny 
-const menu = document.getElementById('menu');
-const settingsBtn = document.getElementById('settingsBtn');
-const closeSettingsBtn = document.getElementById('closeSettingsBtn');
-const saveSettingsBtn = document.getElementById('saveSettingsBtn');
 
-settingsBtn.addEventListener('click', () => { menu.style.display = 'block'; });
-closeSettingsBtn.addEventListener('click', () => { menu.style.display = 'none'; });
-saveSettingsBtn.addEventListener('click', () => {
-  const p1Left = document.getElementById('p1Left').value.trim();
-  const p1Right = document.getElementById('p1Right').value.trim();
-  const p1Attack = document.getElementById('p1Attack').value.trim();
-  const p1Jump = document.getElementById('p1Jump').value.trim();
-  const p2Left = document.getElementById('p2Left').value.trim();
-  const p2Right = document.getElementById('p2Right').value.trim();
-  const p2Attack = document.getElementById('p2Attack').value.trim();
-  const p2Jump = document.getElementById('p2Jump').value.trim();
-  
-  if (p1Left !== '') player1.keyLeft = p1Left;
-  if (p1Right !== '') player1.keyRight = p1Right;
-  if (p1Attack !== '') player1.keyAttack = p1Attack;
-  if (p1Jump !== '') player1.keyJump = p1Jump;
-  if (p2Left !== '') player2.keyLeft = p2Left;
-  if (p2Right !== '') player2.keyRight = p2Right;
-  if (p2Attack !== '') player2.keyAttack = p2Attack;
-  if (p2Jump !== '') player2.keyJump = p2Jump;
-  
-  menu.style.display = 'none';
-});
-restartBtn.addEventListener('click', () => { restartGame(); });
 
 ctx.font = '16px Arial';
 gameLoop();
