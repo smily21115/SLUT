@@ -33,7 +33,7 @@ let player1 = {
 };
 
 let player2 = {
-  x: 650,
+  x: 850,
   y: canvas.height - playerHeight,
   color: 'blue',
   hp: 100,
@@ -110,7 +110,7 @@ function updatePlayer(player, opponent) {
     //invincibillity frame
     setTimeout(() => {
       player.isInvincible = false;
-    }, 100);
+    }, 200);
     
     // start timer cooldown för dash
     player.dashCooldownTimeout = setTimeout(() => {
@@ -172,11 +172,11 @@ function drawPlayer(player) {
   ctx.fillRect(player.x, player.y, playerWidth, playerHeight);
 }
 
-// Rita HP barer
+// Rita hp barer
 function drawHPBars() {
   ctx.fillStyle = 'white';
   ctx.fillText(`Spelare 1 HP: ${player1.hp}`, 20, 20);
-  ctx.fillText(`Spelare 2 HP: ${player2.hp}`, 620, 20);
+  ctx.fillText(`Spelare 2 HP: ${player2.hp}`, 850, 20);
 }
 
 // Huvud loop
@@ -208,7 +208,7 @@ function restartGame() {
   player1.hp = 100;
   player2.hp = 100;
   player1.x = 100;
-  player2.x = 650;
+  player2.x = 850;
   player1.y = canvas.height - playerHeight;
   player2.y = canvas.height - playerHeight;
   player1.vy = 0;
