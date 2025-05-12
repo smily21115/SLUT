@@ -1,43 +1,150 @@
+/* bas */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .topnav {
-    display: flex;
-    background-color: #333;
-    align-items: center;
-    padding: 10px;
-  }
-  .topnav a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-  }
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .content {
-    padding: 20px;
-    padding-bottom: 70px; 
-    min-height: 90vh;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-  .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
+/* top Nav*/
+.topnav {
+  display: flex;
+  background-color: #333;
+  align-items: center;
+  padding: 10px;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Huvud sektion */
+.content {
+  padding: 20px;
+  padding-bottom: 70px;
+  min-height: 90vh;
+}
+
+/* FOT */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Banner  */
+.banner {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  height: 50vh; 
+  opacity: 0;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.banner * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Banner vidoe bakrudn */
+.banner-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 20px;
+}
+
+.banner-content h1,
+.banner-content h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-content p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Call-to-Action Button */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .banner-content {
+    padding: 50px 10px;
+  }
+}
