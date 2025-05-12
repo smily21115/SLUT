@@ -69,7 +69,7 @@ function tryDash(player, direction, now) {
       }
       player.lastLeftPress = now;
     } else if (direction === 'right') {
-      if (now - player.lastRightPress < 250) {
+      if (now - player.lastRightPress < 200) {
         player.dashDirection = "right";
         player.isDashing = true;
         player.canDash = false;
