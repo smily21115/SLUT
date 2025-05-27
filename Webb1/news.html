@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ODC</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ODC - News</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="bilder/icon.png" />
+  <!-- External Google Font for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="topnav">
+  <header>
+    <nav class="topnav">
+      <!-- Navigation links container -->
+      <div class="nav-links" id="navLinks">
         <a href="home.html">Home</a>
         <a class="active" href="news.html">News</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
       </div>
-    
-      <div class="content">
-        <h1>Welcome to the Example Page</h1>
-        <p>
-          This area represents your main content. You can fill it with text, images, or any other HTML elements as needed.
-        </p>
-      </div>
+      <!-- Burger icon for mobile -->
+      <span class="burger" id="burger">&#9776;</span>
+    </nav>
+  </header>
 
-      <div class="footer">
-        <p>Footer Content © 2025</p>
+  <main class="content">
+    <!-- Notice about the site status -->
+    <div class="notice">
+      <p>
+        Notice: This site is under construction – I did not finish the site yet.
+      </p>
+    </div>
+
+    <!-- News Section -->
+    <section class="news-section fade-in">
+      <div class="content-container">
+        <h1>Latest News</h1>
+        <p>Welcome to our News page. Here you'll find the latest updates and announcements about ODC.</p>
+        <article class="news-item">
+          <h2>News Item One</h2>
+          <p>This is a summary of our first news item.</p>
+        </article>
+        <article class="news-item">
+          <h2>News Item Two</h2>
+          <p>This is a brief summary of our second news item. More details coming soon.</p>
+        </article>
+        <article class="news-item">
+          <h2>News Item Three</h2>
+          <p>Stay tuned for more updates as we continue improving our services.</p>
+        </article>
       </div>
-    
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Footer Content © 2025 ODC</p>
+  </footer>
+
+  <script src="har.js" defer></script>
 </body>
 </html>

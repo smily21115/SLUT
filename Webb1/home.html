@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ODC - Home</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="bilder/icon.png">
-  <!-- External Google Font for headings -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header with Navigation -->
-  <header>
-    <nav class="topnav">
-      <a class="active" href="home.html">Home</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODC - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="bilder/icon.png" />
+    <!-- External Google Font for headings -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="topnav">
+        <!-- Navigation links container -->
+        <div class="nav-links" id="navLinks">
+          <a class="active" href="home.html">Home</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+        </div>
+        <!-- Burger icon for mobile -->
+        <span class="burger" id="burger">&#9776;</span>
+      </nav>
+    </header>
 
-  <!-- Main Content -->
-  <main class="content">
-    <!-- Banner Section with Video Background -->
-    <section class="banner">
-      <!-- Video Background -->
-      <video class="banner-video" autoplay loop muted playsinline>
-        <source src="bilder/banner.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <!-- Banner Content Over the Video -->
-      <div class="banner-content">
-        <h1>Welcome to ODC</h1>
-        <h2>We empower you to reach your goals</h2>
-        <p>Our coaching services equip you with the tools for personal and academic success.</p>
-        <a href="contact.html" class="btn">Book a Session</a>
-      </div>
-    </section>
-  </main>
+    <main class="content">
+      <!-- Banner Section with Video Background -->
+      <section class="banner fade-in">
+        <video
+          class="banner-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          aria-label="Background video showing coaching services"
+        >
+          <source src="bilder/banner.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="banner-content">
+          <h1>Welcome to ODC</h1>
+          <h2>We empower you to reach your goals</h2>
+          <p>
+            Our coaching services equip you with the tools for personal and
+            academic success.
+          </p>
+          <a href="contact.html" class="btn">Book a Session</a>
+        </div>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Footer Content © 2025 ODC</p>
-  </footer>
+    <footer class="footer">
+      <p>Footer Content © 2025 ODC</p>
+    </footer>
 
-  <!-- JavaScript file -->
-  <script src="har.js"></script>
-</body>
+    <script src="har.js" defer></script>
+  </body>
 </html>

@@ -1,29 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ODC</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Oss - ODC</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="bilder/icon.png">
+  <!-- External Google Font for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="topnav">
+  <header>
+    <nav class="topnav">
+      <div class="nav-links" id="navLinks">
         <a href="home.html">Home</a>
-        <a class="active" href="news.html">News</a>
+        <a href="news.html">News</a>
         <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
+        <a class="active" href="about.html">About</a>
       </div>
-    
-      <div class="content">
-        <h1>Welcome to the Example Page</h1>
-        <p>
-          This area represents your main content. You can fill it with text, images, or any other HTML elements as needed.
-        </p>
-      </div>
+      <span class="burger" id="burger">&#9776;</span>
+    </nav>
+  </header>
 
-      <div class="footer">
-        <p>Footer Content © 2025</p>
-      </div>
+  <main>
+    <section class="about-intro fade-in">
+      <h1>Om Oss</h1>
+      <p>Välkommen till ODC! Vi är en framåtsträvande organisation dedikerad till att hjälpa människor att nå sin fulla potential.</p>
+    </section>
     
+    <section class="about-values fade-in">
+      <h2>Våra Grundvärderingar</h2>
+      <ul>
+        <li>Integritet – Öppen och ärlig kommunikation.</li>
+        <li>Innovation – Kontinuerlig utveckling och kreativa lösningar.</li>
+        <li>Excellens – Vi levererar högkvalitativa tjänster.</li>
+        <li>Samarbete – Vi arbetar tillsammans för gemensamma mål.</li>
+      </ul>
+    </section>
+    
+    <section class="about-team fade-in">
+      <h2>Möt Vårt Team</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Namn</th>
+            <th>Position</th>
+            <th>E-post</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Anna Karlsson</td>
+            <td>VD</td>
+            <td>anna@odc.se</td>
+          </tr>
+          <tr>
+            <td>Erik Svensson</td>
+            <td>Teknisk Chef</td>
+            <td>erik@odc.se</td>
+          </tr>
+          <tr>
+            <td>Maria Johansson</td>
+            <td>Kundtjänst</td>
+            <td>maria@odc.se</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section class="about-milestones fade-in">
+      <h2>Vår Resa</h2>
+      <ol>
+        <li>Grundades 2010 med en passion för excellens.</li>
+        <li>Utökade vårt team 2013.</li>
+        <li>Nådde 10 000+ kunder 2017.</li>
+        <li>Vann priset "Bästa Coachingföretag" 2020.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Footer Content © 2025 ODC</p>
+  </footer>
+
+  <script src="har.js" defer></script>
 </body>
 </html>

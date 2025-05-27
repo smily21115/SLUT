@@ -1,119 +1,184 @@
-/* bas */
+/* Global Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-/* top Nav*/
+a {
+  text-decoration: none;
+}
+
+/* Typography & External Fonts */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Navigation Styles */
 .topnav {
   display: flex;
-  background-color: #333;
+  justify-content: space-between;
   align-items: center;
+  background-color: #333;
   padding: 10px;
 }
 
-.topnav a {
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
   color: white;
-  text-decoration: none;
   padding: 14px 20px;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
+/* Active state & hover effect for nav links */
+.nav-links a.active,
+.nav-links a:hover {
   background-color: #4CAF50;
   color: white;
 }
 
-/* Huvud sektion */
-.content {
-  padding: 20px;
-  padding-bottom: 70px;
-  min-height: 90vh;
-}
-
-/* FOT */
-.footer {
-  background-color: #333;
+/* Burger Icon (Mobile Navigation) */
+.burger {
+  display: none;
+  font-size: 24px;
   color: white;
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  box-sizing: border-box;
+  cursor: pointer;
 }
 
-/* Banner  */
+/* Banner Section Styles */
 .banner {
   position: relative;
   overflow: hidden;
-  text-align: center;
-  color: white;
-  height: 50vh; 
-  opacity: 0;
+  height: 75vh;
 }
 
-.banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 0;
-}
-
-.banner * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Banner vidoe bakrudn */
 .banner-video {
   position: absolute;
   top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  z-index: 1;
 }
 
 .banner-content {
   position: relative;
-  z-index: 1;
-  padding: 100px 20px;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding-top: 20vh;
 }
 
-.banner-content h1,
-.banner-content h2 {
-  margin: 0;
-  padding: 0;
+/* Centered Containers for Contact & About Pages */
+/* Contact Form Container */
+.contact-form {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.banner-content p {
-  max-width: 600px;
-  margin: 20px auto;
+/* General Centered Content Container (e.g., for About sections) */
+.content-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Call-to-Action Button */
+/* Contact Form Specific Styles */
+.contact-form .form-group {
+  margin-bottom: 24px;
+}
+
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Main Content & Fade-In Animation */
+main {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+section {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade-in effect when activated (via JavaScript) */
+.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* List & Table Styling */
+ul, ol {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Footer Styles */
+.footer {
+  background-image: url('bilder/footer-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
 .btn {
   display: inline-block;
   padding: 12px 24px;
   background-color: #4CAF50;
   color: white;
-  text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
+  text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
@@ -121,30 +186,40 @@ body {
   background-color: #45a049;
 }
 
-/* Fade-In Animation */
-.fade-in {
-  animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Responsive adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .topnav {
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
+    background-color: #333;
   }
   
-  .banner-content {
-    padding: 50px 10px;
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .burger {
+    display: block;
+  }
+  
+  .topnav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  table, th, td {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topnav a {
+    padding: 10px 15px;
   }
 }
